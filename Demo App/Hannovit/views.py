@@ -25,4 +25,4 @@ def search(request):
     if(Name):
         users = list(User.objects.filter(Name__contains=Name))
         return render(request, 'Hannovit/search.html', {'Users':users[0:10],'Name':Name})
-    return render(request, 'Hannovit/search.html')
+    return render(request, 'Hannovit/search.html', {'Name':""})
