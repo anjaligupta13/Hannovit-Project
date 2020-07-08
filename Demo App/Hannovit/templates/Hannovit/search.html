@@ -1,0 +1,37 @@
+  
+{% extends "Hannovit/base.html" %}
+{% block head %}
+    <title>Hannovit Demo</title>
+{% endblock %}
+        
+{% block content %}
+<form action="/search">
+    <input type="text" name="Name" value="{{Name}}" placeholder="Please enter the name">
+    &nbsp;&nbsp;
+    <input type="submit" value="Search">
+</form>
+{% if Users %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Pan Number</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in Users %}
+            <tr>
+                <td>{{u.Name}}</td>
+                <td>{{u.Email_Add}}</td>
+                <td>{{u.Pan_Number}}</td>
+                <td>{{u.Age}}</td>
+                <td>{{u.Gender}}</td>
+            </tr>    
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+{% endblock %}

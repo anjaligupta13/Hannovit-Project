@@ -1,0 +1,50 @@
+﻿  
+{% extends "Hannovit/base.html" %}
+{% block head %}
+    <title>Hannovit Demo</title>
+{% endblock %}
+        
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <div id="main1">
+            <label>Name</label>
+            <input type="text" name="Name" id="name" placeholder="Enter Name">
+
+            
+            <label>Pan Number</label>
+            <input type="text" name="Pan_Number" id="pname" placeholder="Enter Pan Number">
+
+        </div>
+        <br>
+        <div id="main2">
+            <label>Age</label>
+            <input type="text" name="Age" id="aname" placeholder="Enter Age">
+
+
+            <label>Gender</label>
+            <select name="Gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" name="Email_Add" id="email" placeholder="Enter Email Id">
+
+        </div>
+        <br>
+        <div>
+            <label>City</label>
+            <input type="text" id="cname" placeholder="Enter City">
+
+        </div>
+        <br>
+        <div id="main3">
+        <button type="submit">Add</button>
+        </div>
+
+    </form>
+{% endblock %}

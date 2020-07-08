@@ -1,0 +1,131 @@
+<html>
+<head>
+    {% block head %}
+        <title>Hannovit Demo</title>
+    {% endblock %}
+   <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        background: #000;
+        color: #fff;
+    }
+    header>ul{
+        list-style: none;
+        height: 53px;
+    }
+    header>ul li{
+        display: inline-block;
+        font-size: 22px;
+    }
+    header>ul li a{
+        color:#fff;
+        text-decoration: none;
+        color: #fff;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    header>ul li a:hover{
+        background-color: #ccc;
+    }
+	.main {
+    width: 1000px;
+    margin-left: 410px;
+    padding: 50px;
+}
+
+.main1 {
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 325px;
+}
+
+.name {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.pname {
+    position: relative;
+    left: 410px;
+   top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.main2 {
+    margin-left: 25px;
+    margin-top: 60px;
+    width: 325px;
+}
+
+.aname {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.gender {
+    position: relative;
+    left: 410px;
+    top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.main3 {
+    margin-left: 25px;
+    margin-top: 60px;
+    width: 325px;
+}
+
+.search {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.add {
+    position: relative;
+    left: 410px;
+    top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
